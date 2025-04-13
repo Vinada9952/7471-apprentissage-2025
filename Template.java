@@ -13,6 +13,7 @@ class Main {
 }
 
 // LAURENT GET BACK TO WORK
+// FAIS MOI CETTE CALCU
 
 class Input {
   public String letters() {
