@@ -6,7 +6,7 @@ class Main {
     Input input = new Input();
     System.out.println("Addition ou Soustraction (entrez la première lettre)");
     String choix_de_reponse = input.letters();
-    if( choix_de_reponse == "a" ){
+    if( choix_de_reponse.equals("a") ){
       System.out.println("Quel est votre premier nombre?");
       double premier_terme = input.numbers();
       System.out.println("Quel est le deuxième nombre?");
@@ -14,7 +14,7 @@ class Main {
       double resultat = basic.addition(premier_terme, deuxieme_terme);
       System.out.println("Le résultat est:"+resultat);
     }
-    else if(choix_de_reponse == "s"){
+    else if(choix_de_reponse.equals("s")){
       System.out.println("Quel est votre premier nombre?");
       double premier_terme = input.numbers();
       System.out.println("Quel est le deuxième nombre?");
