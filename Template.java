@@ -4,12 +4,24 @@ class Main {
   public static void main(String[] args) {
     Basic basic = new Basic();
     Input input = new Input();
-    System.out.println("Quel est votre premier nombre?");
-    double premier_terme = input.numbers();
-    System.out.println("Quel est le deuxième nombre?");
-    double deuxieme_terme = input.numbers();
-    double resultat = basic.addition(premier_terme, deuxieme_terme);
-    System.out.println("Le résultat est:"+resultat);
+    System.out.println("Addition ou Soustraction (entrez la première lettre)");
+    String choix_de_reponse = input.letters();
+    if( choix_de_reponse == "a" ){
+      System.out.println("Quel est votre premier nombre?");
+      double premier_terme = input.numbers();
+      System.out.println("Quel est le deuxième nombre?");
+      double deuxieme_terme = input.numbers();
+      double resultat = basic.addition(premier_terme, deuxieme_terme);
+      System.out.println("Le résultat est:"+resultat);
+    }
+    else if(choix_de_reponse == "s"){
+      System.out.println("Quel est votre premier nombre?");
+      double premier_terme = input.numbers();
+      System.out.println("Quel est le deuxième nombre?");
+      double deuxieme_terme = input.numbers();
+      double resultat = basic.soustraction(premier_terme, deuxieme_terme);
+      System.out.println("Le résultat est:"+resultat);
+    }
   }
 }
 
@@ -29,6 +41,10 @@ class Input {
 class Basic {
   public double addition(double a, double b) {
     double c=a+b;
+    return c;
+  }
+  public double soustraction(double a, double b){
+    double c = a-b;
     return c;
   }
 }
