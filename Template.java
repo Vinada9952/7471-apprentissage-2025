@@ -12,6 +12,7 @@ class Main {
   }
 }
 
+// LAURENT GET BACK TO WORK
 
 class Input {
   public String letters() {
