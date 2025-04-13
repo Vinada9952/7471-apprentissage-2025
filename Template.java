@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    Input inputs = new Input();
-
-    System.out.print( "Name : " );
-    String name = inputs.letters();
-    System.out.print( "what is your âge ? " );
-    double age = inputs.numbers();
-    System.out.println( name + ", Your are " + age + " years old" );
+    Basic basic = new Basic();
+    Input input = new Input();
+    System.out.println("Quel est votre premier nombre?");
+    double premier_terme = input.numbers();
+    System.out.println("Quel est le deuxième nombre?");
+    double deuxieme_terme = input.numbers();
+    double resultat = basic.addition(premier_terme, deuxieme_terme);
+    System.out.println("Le résultat est:"+resultat);
   }
 }
 
@@ -21,5 +22,13 @@ class Input {
   public double numbers() {
     Scanner text_input = new Scanner(System.in);
     return text_input.nextDouble();
+  }
+}
+
+
+class Basic {
+  public double addition(double a, double b) {
+    double c=a+b;
+    return c;
   }
 }
