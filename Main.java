@@ -6,39 +6,36 @@ class Main {
         Basic basic = new Basic();
         Secondary secondary = new Secondary();
         
-        System.out.println("Welcome to the Calculator!");
-        System.out.print("Enter the first number: ");
+        System.out.print("Entrez le premier nombre: ");
         double num1 = inputs.numbers();
         
-        System.out.println("Choose an operation: +, -, *, /");
+        System.out.println("Choisissez un opérateur: +, -, *, /");
         String operation = inputs.letters();
         
-        System.out.print("Enter the second number: ");
+        System.out.print("Entrez le 2e nombre: ");
         double num2 = inputs.numbers();
-        
-
         double result = 0;
-        switch (operation) {
-            case "+":
+        if ( operation.equals( "+" ) ) {
             result = basic.add(num1, num2);
-                break;
-                case "-":
-                result = basic.subtract(num1, num2);
-                break;
-                case "*":
-                result = secondary.multiply(num1, num2);
-                break;
-                case "/":
-                result = secondary.divide(num1, num2);
-                break;
-                default:
-                System.out.println("Invalid operation!");
-                return;
-            }
-            
-            System.out.println("The result is: " + result);
+            System.out.println( num1 + operation + num2 + "=" + result );
+        }
+        else if( operation.equals( "-" ) ) {
+            result = basic.sub(num1, num2);
+            System.out.println( num1 + operation + num2 + "=" + result );
+        }
+        else if( operation.equals( "*" ) ) {
+            result = secondary.mul(num1, num2);
+            System.out.println( num1 + operation + num2 + "=" + result );
+        }
+        else if( operation.equals( "/" ) ) {
+            result = secondary.div(num1, num2);
+            System.out.println( num1 + operation + num2 + "=" + result );
+        }
+        else {
+            System.out.println( "Opérateur non valide" );
         }
     }
+}
 
 
 
@@ -62,7 +59,7 @@ class Basic {
         return a + b;
     }
 
-    public double subtract(double a, double b) {
+    public double sub(double a, double b) {
         return a - b;
     }
 }
@@ -70,13 +67,12 @@ class Basic {
 
 
 class Secondary {
-    public double multiply(double a, double b) {
+    public double mul(double a, double b) {
         return a * b;
     }
 
-    public double divide(double a, double b) {
-        if (b == 0) {
-            System.out.println("Error: Division by zero is not allowed.");
+    public double div(double a, double b) {
+        if ( b == 0 ) {
             return 0;
         }
         return a / b;
