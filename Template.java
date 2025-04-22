@@ -6,6 +6,7 @@ class Main {
     Basics basics = new Basics();
     System.out.println("Entrez votre premier nombre : ");
     double a = input.numbers();
+    System.out.println("Quelle operation voulez-vous faire?")
     System.out.println("Entrez votre deuxieme nombre : ");
     double b = input.numbers();
     double c = basics.add(a, b);
@@ -30,6 +31,10 @@ class Input {
 class Basics {
   public double add(double a, double b){
     double c = a + b;
+    return c;
+  }
+  public double moins(double a, double b ){
+    double c = a - b;
     return c;
   }
 }
