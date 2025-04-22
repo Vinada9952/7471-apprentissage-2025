@@ -5,7 +5,6 @@ class Main {
     
     Input inputs = new Input();
 
-   
   }
 }
 
