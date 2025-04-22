@@ -7,7 +7,7 @@ class Main {
 
     System.out.print( "Name : " );
     String name = inputs.letters();
-    System.out.print( "what is your âge ? " );
+    System.out.print( "what is your age ? " );
     double age = inputs.numbers();
     System.out.println( name + ", Your are " + age + " years old" );
   }
