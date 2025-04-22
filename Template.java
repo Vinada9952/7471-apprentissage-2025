@@ -24,6 +24,9 @@ class Input {
     return text_input.nextDouble();
   }
 }
+
+
+
 class Basics {
   public double add(double a, double b){
     double c = a + b;
