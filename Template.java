@@ -38,7 +38,7 @@ class Main {
         double premier_terme = input.numbers();
         System.out.println("Par quoi voulez-vous le diviser?");
         double deuxieme_terme = input.numbers();
-        double resultat = secondary.division(premier_terme, premier_terme);
+        double resultat = secondary.division(premier_terme, deuxieme_terme);
         System.out.println("Le résultat est:"+resultat);
       }
 
