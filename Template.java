@@ -5,11 +5,7 @@ class Main {
     
     Input inputs = new Input();
 
-    System.out.print( "Name : " );
-    String name = inputs.letters();
-    System.out.print( "what is your âge ? " );
-    double age = inputs.numbers();
-    System.out.println( name + ", Your are " + age + " years old" );
+   
   }
 }
 
@@ -22,5 +18,11 @@ class Input {
   public double numbers() {
     Scanner text_input = new Scanner(System.in);
     return text_input.nextDouble();
+  }
+}
+class Basics {
+  public double add(double a, double b){
+    double c = a + b;
+    return c;
   }
 }
