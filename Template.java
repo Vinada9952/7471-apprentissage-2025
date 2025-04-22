@@ -88,5 +88,4 @@ class Secondary {
     double c=a/b;
     return c;
   }
-
 }
