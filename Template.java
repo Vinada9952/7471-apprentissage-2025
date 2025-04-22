@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("Olivier edited this file");
+    System.out.println("Olivier edited this file and will make it something great");
     System.out.println( "Olivier" );
     Input inputs = new Input();
 
